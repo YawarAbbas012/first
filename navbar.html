@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful Navbar & Tab Bar</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* 🌈 Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 🌄 Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #6c63ff, #00d4ff);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 🌟 Navbar */
+        .navbar {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #6c63ff, #00d4ff);
+            /* -webkit-background-clip: text; */
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #b0b8c5;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #ffffff;
+        }
+
+        /* 📝 Main Content */
+        .content {
+            flex: 1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+        }
+
+        /* 📱 Bottom Tab Bar */
+        .tabbar {
+            width: 100%;
+            background: rgba(30, 41, 59, 0.9);
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .tabbar a {
+            text-decoration: none;
+            color: #b0b8c5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.85rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .tabbar a i {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .tabbar a:hover {
+            color: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        .tabbar a.active {
+            color: #6c63ff;
+        }
+
+        /* 📱 Responsive */
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🌟 Top Navbar -->
+    <nav class="navbar">
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 📝 Page Content -->
+    <main class="content">
+        <h1>Welcome!</h1>
+        <p>This page has a beautiful responsive Navbar and Tab Bar built with HTML & CSS ✨</p>
+    </main>
+
+    <!-- 📱 Bottom Tab Bar -->
+    <div class="tabbar">
+        <a href="#" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-bell"></i>
+            <span>Alerts</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+</body>
+
+</html>
