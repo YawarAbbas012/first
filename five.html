@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Box Animation</title>
+  <style>
+    /* 🌈 Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 🟥 Red Container */
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 12px;
+      animation: moveBox 3s ease-in-out infinite;
+    }
+
+    /* ✨ Animation Keyframes */
+    @keyframes moveBox {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(-50px) scale(1.1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🟥 Red Box -->
+  <div class="box"></div>
+
+</body>
+
+</html>
